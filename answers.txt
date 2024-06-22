@@ -1,0 +1,19 @@
+SELECT COUNT(*) AS total_shows
+FROM netflix_shows;
+
+SELECT AVG(duration) AS average_duration_minutes
+FROM netflix_shows;
+SELECT genre, COUNT(*) AS num_shows
+FROM netflix_shows
+GROUP BY genre
+ORDER BY num_shows DESC
+LIMIT 5;
+
+
+SELECT country, COUNT(*) AS num_shows
+FROM netflix_shows
+WHERE country IS NOT NULL
+GROUP BY country
+ORDER BY num_shows DESC;
+
+
